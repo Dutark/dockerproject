@@ -30,7 +30,7 @@ jobs:
 
       - name: Construire et taguer l'image Docker
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/dockerproject:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/app-devops:latest .
       - name: Pousser l'image sur Docker Hub
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/dockerproject:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/app-devops:latest
  
