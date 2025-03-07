@@ -5,10 +5,10 @@ FROM openjdk:17
 WORKDIR /app
 
 # 3️⃣ Copier les fichiers de l'application (le fichier JAR généré par Gradle)
-COPY build/libs/*.jar dockerproject.jar
+COPY build/libs/*.jar app-devops.jar
 
 # 4️⃣ Exposer le port de l'application (par défaut 8080, modifie si nécessaire)
 EXPOSE 8080
 
 # 5️⃣ Définir la commande de démarrage
-CMD ["java", "-jar", "dockerproject.jar"]
+CMD ["java", "-jar", "app-devops.jar"]
